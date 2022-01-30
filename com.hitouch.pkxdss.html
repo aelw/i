@@ -1,0 +1,327 @@
+<html>
+		<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    var items = $(".inline");
+    for(var i = 0; i < items.length; i++){
+        var idx = Math.floor(Math.random() * items.length -1) + 1;
+        var idx2 = Math.floor(Math.random() * items.length -1) + 1;
+        items.eq(idx).before(items.eq(idx2));
+};
+});
+</script>
+			</head>
+  <style>
+   * {color:#000;text-decoration:none;word-break:keep-all}
+   .skins , .cape-skins {display:inline-block}
+    html {background:#fafafa}
+		body {margin:0;padding:0}
+    #body {background:#fff;padding:15px;box-sizing:border-box;margin:0 auto;width:80%}
+	  #inline, .inline {display:inline-block;padding:2px;box-sizing:border-box}
+	  #inline img, .inline img {padding:5px;box-sizing:border-box;background:#fafafa;border:1px solid #eee;border-radius:15px}
+span {font-size:13px;color:#fafafa;margin:10px 0}
+span a {font-size:13px;color:#ccc}
+iframe {margin:0 !important}
+@media (max-width:1024px) {
+#body {width:100%}
+}
+	#inline, .inline {width:50%}
+	#inline img, .inline img {width:100%}
+	#box {padding:5px;background:#fafafa;border-radius:25px;box-sizing:border-box}
+    </style>
+
+<div style='position:fixed;background: #fff;padding:15px;box-sizing:border-box !important;width:100%;opacity:0.98;box-shadow:0px 0px 0px 2px rgba(128, 128, 128, .1);'>
+
+<img onClick="javascript:window.scrollTo(0,0)" src='data:image/png;base64,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' style='float:right;width:50px'/>
+	
+</div>
+<div style='height:80px'></div>	
+<body><div id='body'> 
+
+<center>
+
+<script>
+var skin = new Array('2016_04_11_skin_20160411035725117919','2016_08_01_skin_20160801033534116598','PKXD_Roboz_o','2020_06_21_mini-world-block-art-14647634','2021_08_05_pkxd-18585688','2021_08_05_pkxd-18585568');
+
+document.write("<div class='inline'><a href='http://stock.1002.pw/minecraft/ad3?src=https://raw.githubusercontent.com/aelw/i/main/img/"+skin[0]+"' ><div id='box'><div class=\"skins\" data-player=\""+skin[0]+"\"></div><div class=\"cape-skins\" data-player=\""+skin[0]+"\"></div></div></a></div>");
+document.write("<div class='inline'><a href='http://stock.1002.pw/minecraft/ad3?src=https://raw.githubusercontent.com/aelw/i/main/img/"+skin[1]+"' ><div id='box'><div class=\"skins\" data-player=\""+skin[1]+"\"></div><div class=\"cape-skins\" data-player=\""+skin[1]+"\"></div></div></a></div>");
+document.write("<div class='inline'><a href='http://stock.1002.pw/minecraft/ad3?src=https://raw.githubusercontent.com/aelw/i/main/img/"+skin[2]+"' ><div id='box'><div class=\"skins\" data-player=\""+skin[2]+"\"></div><div class=\"cape-skins\" data-player=\""+skin[2]+"\"></div></div></a></div>");
+document.write("<div class='inline'><a href='http://stock.1002.pw/minecraft/ad3?src=https://raw.githubusercontent.com/aelw/i/main/img/"+skin[3]+"' ><div id='box'><div class=\"skins\" data-player=\""+skin[3]+"\"></div><div class=\"cape-skins\" data-player=\""+skin[3]+"\"></div></div></a></div>");
+document.write("<div class='inline'><a href='http://stock.1002.pw/minecraft/ad3?src=https://raw.githubusercontent.com/aelw/i/main/img/"+skin[4]+"' ><div id='box'><div class=\"skins\" data-player=\""+skin[4]+"\"></div><div class=\"cape-skins\" data-player=\""+skin[4]+"\"></div></div></a></div>");
+document.write("<div class='inline'><a href='http://stock.1002.pw/minecraft/ad3?src=https://raw.githubusercontent.com/aelw/i/main/img/"+skin[5]+"' ><div id='box'><div class=\"skins\" data-player=\""+skin[5]+"\"></div><div class=\"cape-skins\" data-player=\""+skin[5]+"\"></div></div></a></div>");
+
+document.write("<div class='inline'><a href='http://stock.1002.pw/minecraft/ad3?src=https://raw.githubusercontent.com/aelw/i/main/img/"+skin[0]+"' ><div id='box'><div class=\"skins\" data-player=\""+skin[0]+"\"></div><div class=\"cape-skins\" data-player=\""+skin[0]+"\"></div></div></a></div>");
+document.write("<div class='inline'><a href='http://stock.1002.pw/minecraft/ad3?src=https://raw.githubusercontent.com/aelw/i/main/img/"+skin[1]+"' ><div id='box'><div class=\"skins\" data-player=\""+skin[1]+"\"></div><div class=\"cape-skins\" data-player=\""+skin[1]+"\"></div></div></a></div>");
+document.write("<div class='inline'><a href='http://stock.1002.pw/minecraft/ad3?src=https://raw.githubusercontent.com/aelw/i/main/img/"+skin[2]+"' ><div id='box'><div class=\"skins\" data-player=\""+skin[2]+"\"></div><div class=\"cape-skins\" data-player=\""+skin[2]+"\"></div></div></a></div>");
+document.write("<div class='inline'><a href='http://stock.1002.pw/minecraft/ad3?src=https://raw.githubusercontent.com/aelw/i/main/img/"+skin[3]+"' ><div id='box'><div class=\"skins\" data-player=\""+skin[3]+"\"></div><div class=\"cape-skins\" data-player=\""+skin[3]+"\"></div></div></a></div>");
+document.write("<div class='inline'><a href='http://stock.1002.pw/minecraft/ad3?src=https://raw.githubusercontent.com/aelw/i/main/img/"+skin[4]+"' ><div id='box'><div class=\"skins\" data-player=\""+skin[4]+"\"></div><div class=\"cape-skins\" data-player=\""+skin[4]+"\"></div></div></a></div>");
+document.write("<div class='inline'><a href='http://stock.1002.pw/minecraft/ad3?src=https://raw.githubusercontent.com/aelw/i/main/img/"+skin[5]+"' ><div id='box'><div class=\"skins\" data-player=\""+skin[5]+"\"></div><div class=\"cape-skins\" data-player=\""+skin[5]+"\"></div></div></a></div>");
+
+</script>
+
+<!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/opim@1.9.2/skinpreview.js"></script>-->
+<script>
+/*
+	A canvas Minecraft skin renderer
+	Project link: https://github.com/Hacksore/skinpreview.js
+*/
+
+(function ($) {
+	'use strict';
+
+	function SkinPreview() {
+		var self = this;
+		var s = 1;
+		var skinImage = new Image();
+		var skinLoaded = false;
+		var capeloaded = false;
+		var capeEnabled = false;
+		var errorImage = new Image();	
+		var canvas = document.createElement('canvas');
+		var context = canvas.getContext("2d");
+		var _can = document.createElement('canvas');
+		var _ctx = _can.getContext("2d");
+		var options = {};
+		_can.width = 64;
+		_can.height = 32;
+			
+		this.cape = new Image();
+
+		this.drawHead = function(){
+			context.imageSmoothingEnabled = false;
+			context.mozImageSmoothingEnabled = false;
+			context.oImageSmoothingEnabled = false;
+			context.clearRect(0, 0, canvas.width, canvas.height);
+			context.drawImage(skinImage, 8, 8, 8, 8, 0, 0, s*8, s*8);
+			
+		}
+		this.drawHat = function(){
+			if(!options.showHat){ return; }
+			context.imageSmoothingEnabled = false;
+			context.mozImageSmoothingEnabled = false;
+			context.oImageSmoothingEnabled = false;
+
+			context.drawImage(skinImage, 40, 8, 8, 8, 0, 0, s*8, s*8);
+		}
+
+		//this.drawSkinFront = function(){	
+		this.drawSkinFront = function(){	
+			if(!options.front){ return; }
+			var parts = {
+				head: [skinImage, 8, 8, 8, 8, 4, 0, 8, 8],
+				head1: [skinImage, 40, 8, 8, 8, 4, 0, 8, 8],
+				body: [skinImage, 20, 20, 8, 12, 4, 8, 8, 12],
+				body1: [skinImage, 20, 36, 8, 12, 4, 8, 8, 12],
+				leftleg: [skinImage, 4, 20, 4, 12, 4, 20, 4, 12],
+				leftleg1: [skinImage, 4, 36, 4, 12, 4, 20, 4, 12],
+				leftarm: [skinImage, 44, 20, 4, 12, 0, 8, 4, 12],
+				leftarm1: [skinImage, 44, 36, 4, 12, 0, 8, 4, 12],
+				rightleg: [_can, 56, 20, 4, 12, 8, 20, 4, 12],
+				rightleg1: [skinImage, 4, 52, 4, 12, 8, 20, 4, 12],
+				rightarm: [_can, 16, 20, 4, 12, 12, 8, 4, 12],
+				rightarm1: [skinImage, 52, 52, 4, 12, 12, 8, 4, 12]
+			};		
+			this.drawSkin(parts);
+		}	
+		
+		//this.drawSkinBack = function(){	
+		this.drawSkinBack = function(){	
+			if(!options.back){ return; }
+			var parts = {
+				head: [skinImage, 24, 8, 8, 8, 4, 0, 8, 8],
+				head1: [skinImage, 56, 8, 8, 8, 4, 0, 8, 8],
+				body: [skinImage, 32, 20, 8, 12, 4, 8, 8, 12],
+				body1: [skinImage, 32, 36, 8, 12, 4, 8, 8, 12],
+				rightarm: [skinImage, 52, 20, 4, 12, 12, 8, 4, 12],
+				rightarm1: [skinImage, 52, 36, 4, 12, 12, 8, 4, 12],
+				rightleg: [skinImage, 12, 20, 4, 12, 8, 20, 4, 12],	
+				rightleg1: [skinImage, 12, 36, 4, 12, 8, 20, 4, 12],	
+				leftleg: [_can, 48, 20, 4, 12, 4, 20, 4, 12],
+				leftleg1: [skinImage, 12, 52, 4, 12, 4, 20, 4, 12],
+				leftarm: [_can, 8, 20, 4, 12, 0, 8, 4, 12],
+				leftarm1: [skinImage, 60, 52, 4, 12, 0, 8, 4, 12]
+				
+			};	
+			this.drawSkin(parts);
+		}
+		
+		this.drawSkin = function(parts){
+			if(!skinLoaded) { return; }		
+			context.imageSmoothingEnabled = false;
+			context.mozImageSmoothingEnabled = false;
+			context.oImageSmoothingEnabled = false;
+			context.clearRect(0, 0, canvas.width, canvas.height);
+
+			//draw parts
+			for(var i in parts){		
+				var v = parts[i];	
+				context.drawImage(v[0], v[1], v[2], v[3], v[4], v[5]*s, v[6]*s, v[7]*s, v[8]*s);			
+			}
+		}
+			
+		this.setScale = function(scale){		
+			s = scale;
+			canvas.width = 16 * s;
+			canvas.height = 32 * s;
+			this.drawSkinFront();
+			this.drawSkinBack();
+		}
+		
+		this.setSkin = function(user){	
+			capeloaded = false;
+			skinImage = new Image();
+	
+			if(options.imagePath != null){
+				skinImage.src = options.imagePath +user+ ".png" 
+			}
+			else if(options.imageUrl != null){
+				skinImage.src = options.imageUrl; 	
+			}
+			else{
+				skinImage.src = "https://raw.githubusercontent.com/aelw/i/main/img/" +user+ ".png";
+			}
+			skinImage.onload = function(){
+				skinLoaded = true;
+				_ctx.scale(-1, 1);
+				_ctx.drawImage(skinImage, -64, 0);
+				_ctx.scale(-1, 1);
+
+				if(options.head){
+					canvas.width = 8 * s;
+					canvas.height = 8 * s;
+					self.drawHead();
+					self.drawHat();
+					return;
+				}	
+				self.drawSkinFront();
+				self.drawSkinBack();
+		
+			}
+			skinImage.onerror = function(){
+				skinLoaded = true;
+				skinImage = errorImage;
+				_ctx.scale(-1, 1);
+				_ctx.drawImage(skinImage, -64, 0);
+				_ctx.scale(-1, 1);
+				if(options.head){
+					canvas.width = 8 * s;
+					canvas.height = 8 * s;
+					self.drawHead();
+					self.drawHat();
+					return;
+				}	
+				self.drawSkinFront();
+				self.drawSkinBack();
+			}
+
+			if(options.cape && !options.head && !options.capeOverride){
+				this.getCape(user);
+			}
+		}	
+
+		this.getCape = function(user){
+			this.cape.src = options.capePath != null ? options.capePath +user+ ".png" : "https://skins.minecraft.net/MinecraftCloaks/" + user + ".png";
+			this.cape.onload = function(){
+				capeloaded = true;
+				
+			}
+			this.cape.onerror = function(){
+				capeloaded = false;		
+			}
+		}
+		
+		this.drawCape = function(){
+			if(!capeEnabled){ return; }
+			if(!capeloaded){ return; }
+			if(this.cape == null){ return; }
+
+			var w = 12;
+			var h = 17;
+			context.drawImage(this.cape, 0, 0, w, h, s * 2, s * 8, s * w, s * h);
+		}
+		
+		/*canvas.onmouseover = function(){
+			if(options.head){ return; }
+			self.drawSkinBack();
+		}
+
+		canvas.onmouseleave = function(){
+			if(options.head){ return; }
+			self.drawSkinFront();
+		}*/	
+		
+		canvas.oncontextmenu = function(e){	
+			if(options.head){ return; }
+			if(!options.cape){ return; }		
+			if(!capeloaded){ return; }
+
+			e.preventDefault();
+			capeEnabled = !capeEnabled;
+			self.drawSkinBack();
+			self.drawCape();	
+		}
+
+		this.init = function(ele, _options){	
+			options = _options;
+	
+			capeEnabled = options.cape;
+
+			errorImage.src = options.default_skin;
+			errorImage.onload = function() {}			
+			
+			this.setScale(options.scale);
+			this.setSkin(options.skin);
+					
+			canvas.className = options.className		
+
+			$(ele).append(canvas);
+		}	
+		
+	}
+
+	$.fn.skinPreview = function (options) {
+		this.each(function () {
+			var defaults = {
+				scale: 4,
+				head: false,
+				showHat: true,//프론트유무
+				front: false,
+				back: false,
+				cape: false,
+				capePath: null,
+				capeOverride: $(this).attr('data-cape'),
+				imagePath: null,
+				className: "",
+				default_skin: "https://raw.githubusercontent.com/aelw/i/main/char.png",
+				skin: $(this).attr('data-player'),  
+				imageUrl: $(this).attr('data-url')  
+			};
+	 
+			var sp = new SkinPreview();
+			sp.init(this, $.extend(defaults, options));
+		});
+	};
+			
+} (window.jQuery));
+
+$(window).bind("load", function() {
+	
+	$(".skins").skinPreview({
+		front: true
+	});
+	
+	$(".cape-skins").skinPreview({
+		back: true
+	});
+
+	
+});
+</script>
+
+
+	</center>	  
+		  </div>
+  </body>
+</html>
